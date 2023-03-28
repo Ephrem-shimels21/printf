@@ -1,3 +1,7 @@
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
+
+
 #include <stdlib.h>
 #include <stdarg.h>
 /**
@@ -20,11 +24,13 @@ typedef struct flags
  * @c: format specifier
  * @f: pointer to the correct printing function
  */
+
 typedef struct printHandler
 {
 	char c;
 	int (*f)(va_list ap, flags_t *f);
 } ph;
+
 int print_int(va_list l, flags_t *f);
 void print_number(int n);
 int print_unsigned(va_list l, flags_t *f);
@@ -46,3 +52,5 @@ int print_bigS(va_list l, flags_t *f);
 int print_address(va_list l, flags_t *f);
 int print_percent(va_list l, flags_t *f);
 int _printf(const char *format, ...);
+int (*get_print(char s))(va_list, flags_t *);
+#endif
