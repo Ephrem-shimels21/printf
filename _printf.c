@@ -10,4 +10,14 @@
 int _printf(const char *format, ...)
 {
 	va_list var;
+	int i = 0;
+
+	va_start(var, format);
+
+	while format[i] != '\0'
+	{
+
+		putchar(va_arg(var, char));
+		i++;
+	}
 }
