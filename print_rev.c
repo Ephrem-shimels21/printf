@@ -1,15 +1,18 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "main.h"
+
 /**
 *print_rev - prints astring in reverse
 *@r: string to print
 *Return: number of chars printed
 */
-int print_rev(va_list r, ...)
+
+int print_rev(va_list r,flags_t *f )
 {
 	char *st;
 	int i, j = 0;
+	f;
 
 	st = va_arg(r, char *);
 	if (st == NULL)
