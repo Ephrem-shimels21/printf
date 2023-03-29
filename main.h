@@ -1,7 +1,3 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-
-
 #include <stdlib.h>
 #include <stdarg.h>
 
@@ -48,10 +44,9 @@ int print_char(va_list l, flags_t *f);
 int _putchar(char c);
 int _puts(char *str);
 int print_rot13(va_list l, flags_t *f);
-int print_rev(va_list l, flags_t *f);
+int print_rev(va_list l);
 int print_bigS(va_list l, flags_t *f);
 int print_address(va_list l, flags_t *f);
 int print_percent(va_list l, flags_t *f);
 int _printf(const char *format, ...);
 int (*get_print(char s))(va_list, flags_t *);
-#endif
