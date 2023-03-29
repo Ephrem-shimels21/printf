@@ -44,6 +44,7 @@ int print_bigS(va_list l, flags_t *f)
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
+/*
 int print_rev(va_list l, flags_t *f)
 {
 	int i = 0, j;
@@ -61,7 +62,7 @@ int print_rev(va_list l, flags_t *f)
 
 	return (i);
 }
-
+*/
 /**
  * print_rot13 - prints a string using rot13
  * @l: list of arguments from _printf

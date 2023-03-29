@@ -7,12 +7,12 @@
 *@r: string to print
 *Return: number of chars printed
 */
-
-int print_rev(va_list r,flags_t *f )
+/*
+int print_rev(va_list r,flags_t *f)
 {
 	char *st;
 	int i, j = 0;
-	f;
+	f = f;
 
 	st = va_arg(r, char *);
 	if (st == NULL)
@@ -26,3 +26,31 @@ int print_rev(va_list r,flags_t *f )
 	}
 	return (j);
 }
+*/
+
+
+/**
+ * print_rev - prints a string in reverse
+ * @l: argument from _printf
+ * @f: pointer to the struct flags that determines
+ * if a flag is passed to _printf
+ * Return: length of the printed string
+ */
+int print_rev(va_list l, flags_t *f)
+{
+        int i = 0, j;
+        char *s = va_arg(l, char *);
+
+        (void)f;
+        if (!s)
+                s = "(null)";
+
+        while (s[i])
+                i++;
+
+        for (j = i - 1; j >= 0; j--)
+                _putchar(s[j]);
+
+        return (i);
+}
+
